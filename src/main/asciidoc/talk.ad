@@ -1,0 +1,64 @@
+:icons: font
+:twitter-tag: UDE
+:conference-tag:
+:talk-tag: UI Patterns Android
+:linkattrs:
+ifndef::partials[:partials: partials]
+
+include::{partials}/footer.ad[]
+
+== Patrones de UI en Android
+
+//== !
+//image::pattern-design-4pwbdv1y.jpg[background, size=auto]
+// Fuente: https://standaserigraf.wordpress.com/2015/09/30/pattern-design-tecnica-artistica-que-se-ocupa-de-la-creacion-de-patrones-graficos/
+== !
+* MVP
+* MVVM
+
+== Model View Presenter (MVP)
+
+El patron MVP es similar al MVC. Es derivado a partir de MVC, pero reemplaza el controlador por el presentador. Divide la aplicación en tres grandes aspectos: Modelo, Vista y Presentador.
+
+== Modelo
+Representa un grupo de clases que describe la lógica de negocio y los datos. También define las reglas de como los datos pueden ser cambiados y manipulados.
+
+== Vista
+
+Es el componente que interactua directamente con el usuario (Layouts XML, Activities y Fragmentos). No contiene ninguna lógica.
+
+== Presentador
+
+Actúa sobre el modelo y la vista. Recupera datos de los repositorios (el modelo), y los formatea para mostrarlos en la vista.
+
+
+
+== Diagrama
+
+image::mvp.png[background, size=auto]
+
+== MVP vs MVC
+
+image::mvp-vs-mvc.png[background, size=auto]
+
+
+== Usos y Alternativas
+
+* Delega la mayoría del trabajo al presentador y remueve el controlador.
+* El presentador encapsula el estado y los comandos de la vista. El presentador es el mediador entre la vista y el modelo
+* La vista esta separada del modelo => mejor separación de responsabilidades
+* Model View ViewModel (MVVM)
+
+== Responsabilidades de MVP
+
+image::mvp-responsabilities.png[background, size=auto]
+
+== Conclusiones
+
+* MVP separa la presentación de la lógica
+* El objetivo de este patrón es poder aplicar la lógica en vistas diferentes sin necesidad de reescribirla
+* No es un patrón de arquitectura, solo es responsible de la presentación
+* Hace las vistas independientes del modelo o la fuente de datos.
+* Facilita los test, pues separa las responsabilidades.
+
+include::{partials}/self.ad[]
