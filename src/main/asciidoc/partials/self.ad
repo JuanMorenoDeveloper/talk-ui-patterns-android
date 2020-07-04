@@ -2,7 +2,9 @@
 
 * Fuentes:
 
-** http://www.wildcrest.com/Potel/Portfolio/mvp.pdf[Paper MVP]
+** http://www.wildcrest.com/Potel/Portfolio/mvp.pdf[MVP: Model-View-Presenter]
+** https://blogs.msdn.microsoft.com/johngossman/2005/10/08/introduction-to-modelviewviewmodel-pattern-for-building-wpf-apps/[Introduction to Model/View/ViewModel pattern]
+** https://en.wikipedia.org/wiki/Observer_pattern[Observer pattern]
 
 [NOTE.speaker]
 ====

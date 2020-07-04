@@ -31,8 +31,6 @@ Es el componente que interactua directamente con el usuario (Layouts XML, Activi
 
 Actúa sobre el modelo y la vista. Recupera datos de los repositorios (el modelo), y los formatea para mostrarlos en la vista.
 
-
-
 == Diagrama
 
 image::mvp.png[background, size=auto]
@@ -52,6 +50,35 @@ image::mvp-vs-mvc.png[background, size=auto]
 == Responsabilidades de MVP
 
 image::mvp-responsabilities.png[background, size=auto]
+
+== MVVM
+
+Es un patrón de arquitectura de software. Se caracteriza por tratar de desacoplar lo máximo posible la interfaz de usuario de la lógica de la aplicación.
+
+== Componentes MVVM
+* *Modelo*:  Se define como en MVP
+
+* *Vista*: Se define como en MVP, pero con la variación que las vistas en MVVM son activas, contienen comportamientos, eventos y enlaces a datos que, en cierta manera, necesitan tener conocimiento del modelo subyacente.
+
+== Componentes MVVM
+* *View model*: El modelo de vista es un actor intermediario entre el modelo y la vista, contiene toda la lógica de presentación y se comporta como una abstracción de la interfaz. La comunicación entre la vista y el viewmodel se realiza por medio los enlaces de datos (Patrón Observer y Eventos).
+
+== Diagrama
+
+image::MVVMPattern.png[background, size=auto]
+
+== Diferencias entre MVP y MVVM
+* En MVP, el presentador se comunica con la vista a través de una interfaz.
+* En MVVM, el ViewModel se comunica con la vista usando el ​patrón
+Observer​.
+
+== Patrón Observer
+
+Es un patrón de diseño de software que define una *dependencia del tipo uno a muchos entre objetos*, de manera que cuando uno de los *objetos cambia su estado*, *notifica este cambio a todos los dependientes*.
+
+== Diagrama Patrón Observer
+
+image::800px-Observer_w_update.svg.png[background, size=auto]
 
 == Conclusiones
 
